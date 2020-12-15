@@ -2,6 +2,7 @@
 # esse arquivo está apenas inserindo
 # ainda irei termina-lo, se quiser praticar faça vc mesmo a funcao remover(), fica como licao de casa :)
 
+
 class No:
     def __init__(self, valor):
         self.valor = valor
@@ -74,12 +75,10 @@ class ListaSimples:
             if indice == 0:
                 # remover no indice zero
                 self.prim = self.prim.getProx()
-                #novoNo.setProx(self.prim)
-                #self.prim = novoNo
-            elif indice >= self.getTam():
-                # inserir no final
-                self.ultimo.setProx(novoNo)
-                self.ultimo = novoNo
+            elif indice == self.getTam():
+                # remover no fim
+                self.ultimo = None
+                print("removido o ulitmo item")
             else:
                 #inserir no meio
                 noAnterior = self.prim
@@ -100,11 +99,8 @@ lista = ListaSimples()
 lista.inserir("Denys Silva",0)
 lista.inserir("Chris Headfield",1)
 lista.inserir("Leon S. Kennedy",2)
-lista.inserir("Veronica",1)
+lista.inserir("Veronica",3)
 lista.mostrar()
 
-lista.remover(0)
+lista.remover(3)
 lista.mostrar()
-
-
-
