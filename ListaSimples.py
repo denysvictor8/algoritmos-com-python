@@ -35,9 +35,8 @@ class ListaSimples:
         else:
             if indice == 0:
                 # inserir no indice zero
-                self.prox = self.prim
-                self.prim = novoNo
-                self.indice = indice
+                self.prim = self.ultimo = novoNo
+
             elif indice >= self.getTam():
                 # inserir no final
                 self.ultimo.setProx(novoNo)
@@ -52,6 +51,7 @@ class ListaSimples:
                     if indiceAtual == indice:
                         novoNo.setProx(noAtual)
                         noAnterior.setProx(novoNo)
+                        break
                     noAnterior = noAtual
                     noAtual = noAtual.getProx()
                     indiceAtual += 1
@@ -66,10 +66,15 @@ class ListaSimples:
         print("------")
 
 lista = ListaSimples()
-lista.inserir("Denys",0)
-lista.inserir("Chris",1)
-lista.inserir("Leon",2)
-lista.inserir("Muller",3)
-lista.inserir("Emanuel",4)
+lista.inserir("Denys Silva",0)
+lista.inserir("Chris Headfield",1)
+lista.inserir("Leon S. Kennedy",2)
+lista.inserir("Ada Wong",3)
 lista.mostrar()
 
+lista = ListaSimples()
+lista.inserir("Denys Silva",0)
+lista.inserir("Chris Headfield",1)
+lista.inserir("Leon S. Kennedy",2)
+lista.inserir("Ada Wong",0)
+lista.mostrar()
