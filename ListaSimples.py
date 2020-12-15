@@ -1,9 +1,12 @@
 
+# esse arquivo está apenas inserindo
+# ainda irei termina-lo, se quiser praticar faça vc mesmo a funcao remover(), fica como licao de casa :)
+
+
 class No:
     def __init__(self, valor):
         self.valor = valor
         self.prox = None
-
         # um no possui um valor e aponta para o seu proximo 'companheiro'
 
     def getValor(self):
