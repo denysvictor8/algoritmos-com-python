@@ -35,8 +35,8 @@ class ListaSimples:
         else:
             if indice == 0:
                 # inserir no indice zero
-                self.prim = self.ultimo = novoNo
-
+                novoNo.setProx(self.prim)
+                self.prim = novoNo
             elif indice >= self.getTam():
                 # inserir no final
                 self.ultimo.setProx(novoNo)
