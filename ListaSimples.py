@@ -4,7 +4,7 @@ class No:
         self.valor = valor
         self.prox = None
 
-        # um no possui um valor e seu proximo 'companheiro'
+        # um no possui um valor e aponta para o seu proximo 'companheiro'
 
     def getValor(self):
         return self.valor
