@@ -1,6 +1,6 @@
 
 # esse arquivo está apenas inserindo
-# ainda irei termina-lo, se quiser praticar faça vc mesmo a funcao remover(), fica como licao de casa :)
+# ainda tem que terminar a funcao remover(), na hora de retirar o ultimo item, fica como licao de casa :)
 
 class No:
     def __init__(self, valor):
