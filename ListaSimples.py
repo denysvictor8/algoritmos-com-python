@@ -1,5 +1,5 @@
 
-# ai segue a lista simples encadeada, acredito não estar do melhor jeito, assim, desafio voces a melhorem :D
+# ai segue a lista simples encadeada, acredito não estar do melhor jeito, assim, desafio voces a melhorem-na :D
 
 class No:
     def __init__(self, valor):
