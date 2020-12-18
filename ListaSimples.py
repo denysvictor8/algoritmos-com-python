@@ -61,9 +61,11 @@ class ListaSimples:
 
     def mostrar(self):
         aux = self.prim
+        contador = 0
         while aux != None:
-            print(aux.getValor())
+            print(contador, aux.getValor())
             aux = aux.getProx()
+            contador += 1
         print("------")
 
     # todo metodo a ser feito
@@ -97,13 +99,16 @@ class ListaSimples:
 lista = ListaSimples()
 
 lista.inserir("Denys Silva",0)
-lista.inserir("Chris Headfield",1)
+lista.inserir("Chris Redfield",1)
 lista.inserir("Leon S. Kennedy",2)
 lista.inserir("Ada Wong",3)
-lista.inserir("Hank",4)
-lista.inserir("Veronica",5)
+lista.inserir("Jack Krauser",4)
+lista.inserir("Claire Redfield",5)
+lista.inserir("Albert Wesker",6)
+lista.inserir("Hunk",7)
+lista.inserir("Ramon Salazar",8)
 lista.mostrar()
-lista.remover(9)
+lista.remover(3)
 lista.mostrar()
 
 '''
