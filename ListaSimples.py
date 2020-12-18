@@ -1,7 +1,5 @@
 
-# esse arquivo está apenas inserindo
-# ainda tem que terminar a funcao remover(), na hora de retirar o ultimo item, fica como licao de casa :)
-
+# ai segue a lista simples encadeada, acredito não estar do melhor jeito, assim, desafio voces a melhorem :D
 
 class No:
     def __init__(self, valor):
@@ -69,7 +67,6 @@ class ListaSimples:
             contador += 1
         print("------")
 
-    # todo metodo a ser feito
     def remover(self, indice):
         # caso a lista nao tenha nada
         if self.getTam() == 0:
