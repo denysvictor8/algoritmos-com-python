@@ -2,6 +2,7 @@
 # esse arquivo está apenas inserindo
 # ainda tem que terminar a funcao remover(), na hora de retirar o ultimo item, fica como licao de casa :)
 
+
 class No:
     def __init__(self, valor):
         self.valor = valor
@@ -70,18 +71,15 @@ class ListaSimples:
 
     # todo metodo a ser feito
     def remover(self, indice):
+        # caso a lista nao tenha nada
         if self.getTam() == 0:
             print("lista vazia, remocao impossivel")
         else:
             if indice == 0:
                 # remover o primeiro da lista
                 self.prim = self.prim.getProx()
-            elif indice >= self.getTam():
-                # remover no fim
-                self.ultimo = None
-                print("removido o ulitmo item")
-            else:
-                # remover no meio
+            elif (indice <= self.getTam() and indice > 0):
+                # remover no meio e fim
                 noAnterior = self.prim
                 noAtual = self.prim.getProx()
                 indiceAtual = 1
@@ -94,6 +92,9 @@ class ListaSimples:
                     noAnterior = noAtual
                     noAtual = noAtual.getProx()
                     indiceAtual += 1
+            else:
+                # caso seja digitado um numero invalido
+                print("Digite um numero que esteja dentro dos limites da lista!!!")
         self.tam -= 1
 
 lista = ListaSimples()
@@ -108,12 +109,11 @@ lista.inserir("Albert Wesker",6)
 lista.inserir("Hunk",7)
 lista.inserir("Ramon Salazar",8)
 lista.mostrar()
-lista.remover(3)
+lista.remover(8)
 lista.mostrar()
 
 '''
-
-# removendo no inicio e meio
+# removendo no inicio, fim e meio
 lista.inserir("Denys Silva",0)
 lista.inserir("Chris Headfield",1)
 lista.inserir("Leon S. Kennedy",2)
@@ -122,7 +122,6 @@ lista.inserir("Ada Wong",4)
 lista.mostrar()
 lista.remover(0)
 lista.mostrar()
-
 # inserindo no comeco, meio e fim
 lista.inserir("Denys Silva",0)
 lista.inserir("Chris Headfield",5)
@@ -131,8 +130,4 @@ lista.inserir("Leon S. Kennedy",1)
 lista.inserir("Veronica",3)
 lista.inserir("Ada Wong",2)
 lista.mostrar()
-
 '''
-
-
-
