@@ -112,7 +112,8 @@ lista.remover(3)
 lista.mostrar()
 
 '''
-# removendo no inicio
+
+# removendo no inicio e meio
 lista.inserir("Denys Silva",0)
 lista.inserir("Chris Headfield",1)
 lista.inserir("Leon S. Kennedy",2)
@@ -130,7 +131,6 @@ lista.inserir("Leon S. Kennedy",1)
 lista.inserir("Veronica",3)
 lista.inserir("Ada Wong",2)
 lista.mostrar()
-
 
 '''
 
